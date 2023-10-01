@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm Clock</title>
+    <!-- Include Bootstrap CSS for styling -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Include Custom CSS for additional styling -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Include FontAwesome CSS for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <!-- Main container for the entire content -->
+    <div class="container-fluid">
+        <!-- Clock Section -->
+        <div class="row">
+            <div class="col-md-6 offset-md-3 text-center">
+                <h2>Clock</h2>
+                <div class="clock">
+                    <!-- Display the current time here -->
+                    <h1 id="time"></h1>
+                </div>
+            </div>
+        </div>
+
+        <!-- Set Alarm and Alarms Sections -->
+        <div class="row">
+            <!-- Set Alarm Section -->
+            <div class="col-md-6">
+                <div class="set-alarm">
+                    <h2>Set Alarm</h2>
+                    <!-- Input fields for setting the alarm time -->
+                    <input type="number" id="hour" placeholder="Hour" min="1" max="12" class="form-control-lg">
+                    <input type="number" id="minute" placeholder="Minutes" min="0" max="59" class="form-control-lg">
+                    <input type="number" id="second" placeholder="Seconds" min="0" max="59" class="form-control-lg">
+                    <!-- Dropdown to select AM/PM -->
+                    <select id="ampm" class="form-control-lg">
+                        <option value="AM">AM</option>
+                        <option value="PM">PM</option>
+                    </select>
+                    <!-- Button to set the alarm -->
+                    <div><button class="btn btn-primary" onclick="setAlarm()">Set Alarm</button></div>
+                </div>
+            </div>
+
+            <!-- Alarms Section -->
+            <div class="col-md-6">
+                <div class="alarms">
+                    <h2>Alarms</h2>
+                    <!-- List to display the set alarms -->
+                    <ul id="alarm-list"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio element for the alarm ringtone -->
+    <audio id="ringtone" src="music.mp3" preload="auto"></audio>
+
+    <!-- Notification container for alarm alerts -->
+    <div class="notification" id="notification">
+        <!-- Bell icon for visual indication -->
+        <i class="fas fa-bell"></i>
+        <!-- Message to indicate alarm -->
+        <p>Times Up!</p>
+        <!-- Button to stop the ringtone -->
+        <button onclick="stopRingtone()" class="btn btn-warning">Stop</button>
+    </div>
+
+    <!-- Include JavaScript libraries and custom script -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

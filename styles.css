@@ -1,0 +1,53 @@
+/* styles.css */
+
+/* Apply background gradient to the body */
+body {
+    background: linear-gradient(46deg, #333, #555);
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+/* Add padding to the main container */
+.container-fluid {
+    padding: 20px;
+}
+
+/* Style for the clock section */
+.clock {
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Styles for set-alarm and alarms sections */
+.set-alarm, .alarms {
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 5px; /* Rounded corners */
+    margin-top: 20px; /* Add top margin for spacing */
+}
+
+/* Style for buttons */
+button {
+    margin-top: 10px; /* Add top margin for spacing */
+}
+
+/* Add this CSS for the notification */
+.notification {
+    position: fixed; /* Fixed position at the bottom */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ff0000; /* Red background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Center-align text */
+    padding: 10px; /* Padding for content */
+    display: none; /* Initially hidden */
+    z-index: 9999; /* Higher z-index for visibility */
+}
+
+/* Style for the bell icon in the notification */
+.notification i {
+    vertical-align: middle; /* Vertically center the icon */
+    margin-right: 10px; /* Right margin for spacing */
+}
